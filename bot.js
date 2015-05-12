@@ -1570,23 +1570,23 @@
                 }
             },
 
-            gandalfCommand: {
+            /*gandalfCommand: {
                 command: ['gandalf'],
                 rank: 'cohost',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
-                	if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-else {
-			var msg = chat.message;
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
                         if (msg.length === cmd.length) return API.sendChat(subChat(basicBot.chat.nouserspecified, {name: chat.un}));
                         var name = msg.substr(cmd.length + 2);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
-                        API.sendChat('/me You shall not pass, ' + user.id)
-}
-}
-            },
+                        API.sendChat('/me You shall not pass, ' + user.id);
+                    }
+                }
+            },*/
 
             banCommand: {
                 command: 'ban',
