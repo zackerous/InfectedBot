@@ -1571,7 +1571,6 @@
             },
 
             onlineUsersCommand: {
-            	var bash = API.getUsers()
                 command: ['onlineUsers'],
                 rank: 'bouncer',
                 type: 'startsWith',
@@ -1579,7 +1578,9 @@
                 	if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
 if (!basicBot.commands.executable(this.rank, chat)) return void (0);
 else {
-API.sendChat('/me Online Users: ' + bash);
+API.getUsers(function(users) {
+      API.sendChat("Number of users in the room: " + users.length);
+    });
 }
 }
             },
