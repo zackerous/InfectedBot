@@ -188,7 +188,7 @@
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             startupCap: 1, // 1-200
-            startupVolume: 0, // 0-100
+            startupVolume: 100, // 0-100
             startupEmoji: false, // true or false
             cmdDeletion: true,
             maximumAfk: 120,
@@ -1571,9 +1571,9 @@
             },
 
             onlineUsersCommand: {
+            	var bash = API.getUsers(),
                 command: ['onlineUsers'],
                 rank: 'bouncer',
-                bash: API.getUsers(),
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                 	if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
