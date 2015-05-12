@@ -1572,7 +1572,7 @@
 
             gandalfCommand: {
                 command: ['gandalf'],
-                rank: 'cohost',
+                rank: 'user',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -1583,7 +1583,7 @@
                         var name = msg.substr(cmd.length + 2);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
-                        API.sendChat('/me You shall not pass, ' + user.name);
+                        API.sendChat('/me ' + chat.un +' says you would not pass, ' + msg.substr(cmd.length + 2););
                     }
                 }
             },
