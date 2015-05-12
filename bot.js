@@ -176,7 +176,7 @@
         status: false,
         name: "InfectedBot",
         loggedInID: null,
-        scriptLink: "http://infecteddjbot.hol.es/bot.js",
+        scriptLink: "https://raw.githubusercontent.com/zackerous/InfectedBot/master/bot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
         chat: null,
