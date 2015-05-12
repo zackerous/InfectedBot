@@ -1581,7 +1581,6 @@ else {
 API.sendChat('/me Online Users:' + API.getUsers());
 }
 }
-                }
             },
 
             banCommand: {
