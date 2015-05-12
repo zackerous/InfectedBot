@@ -1297,7 +1297,7 @@
             }
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
-            loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
+            API.sendChat('/me InfectedBot v 1.0 Online!');
         },
         commands: {
             executable: function (minRank, chat) {
