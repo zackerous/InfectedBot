@@ -1615,7 +1615,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var msg = chat.message;
-                        API.sendChat(msg.substr(cmd.length + 2) + ' - @everyone');
+                        API.sendChat(msg.substr(cmd.length + 1) + ' - @everyone');
                     }
                 }
             },
