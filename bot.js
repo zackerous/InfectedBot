@@ -1570,12 +1570,17 @@
                 }
             },
 
-            sesiCommand: {
+            onlineUsersCommand: {
                 command: ['onlineUsers'],
-                rank: 'admin',
+                rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
-                    API.sendChat(API.getUsers());
+                	if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+else {
+API.sendChat('/me Online Users:' + API.getUsers());
+}
+}
                 }
             },
 
