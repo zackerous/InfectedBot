@@ -1583,7 +1583,7 @@
                         var name = msg.substr(cmd.length + 2);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
-                        API.sendChat('/me ' + chat.un +' says you would not pass, ' + msg.substr(cmd.length + 2));
+                        API.sendChat('/me ' + '[Gandalf] ' + chat.un +' says you would not pass, ' + msg.substr(cmd.length + 2));
                     }
                 }
             },
