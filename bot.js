@@ -1571,7 +1571,7 @@
             },
 
             onlineUsersCommand: {
-            	var bash = API.getUsers(),
+            	var bash = API.getUsers()
                 command: ['onlineUsers'],
                 rank: 'bouncer',
                 type: 'startsWith',
